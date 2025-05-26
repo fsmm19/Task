@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+    --font-heading: 'Bebas Neue', sans-serif;
+    --font-body: 'Space Grotesk', sans-serif;
+
+    --EnglishViolet: #413c58;
+    --AshGray: #a3c4bc;
+    --TeaGreen: #bfd7b5;
+    --Cream: #e7efc5;
+    --Parchment: #f2e7c9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: var(--Parchment);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-body);
+}
+
+/* Header */
+.header {
+    width: 100%;
+    height: 4.5em;
+    background-color: #000;
+    color: #f8f8ef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75em 1.75em;
+    margin-bottom: 6.25em;
+    font-family: var(--font-heading);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu__icon {
+    font-size: 1.25em;
+    cursor: pointer;
+}
+
+.menu__text {
+    font-size: 1.25em;
+    margin-left: 0.5em;
+}
+
+.header__title {
+    font-size: 2em;
+    user-select: none;
+}
+
+.profile {
+    width: 2.25em;
+    height: 2.25em;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Main */
+.todo {
+    width: 90%;
+    max-width: 50em;
+    padding: 0 1.75em;
+}
+
+.todo__form {
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.todo__form-input {
+    width: 100%;
+    background-color: white;
+    border-radius: 0.5em;
+    border-style: none;
+    padding: 0.75em;
+    padding-right: 2.75em;
+    font-size: 1em;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+input[type='text'] {
+    font-family: var(--font-body);
+}
+
+input[type='text']::placeholder {
+    color: grey;
+    font-family: var(--font-body);
+}
+
+.todo__form-button {
+    background-color: #000;
+    border-radius: 0.5em;
+    border-style: none;
+    padding: 0.5em;
+    height: 80%;
+    aspect-ratio: 1;
+    position: absolute;
+    right: 0;
+    transform: translateX(-10%);
+    top: 10%;
+    cursor: pointer;
+}
+
+.todo__form-button i {
+    font-size: 1.5em;
+    color: #f8f8ef;
+}
+
+.todo__list {
+    background-color: white;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 2em;
+}
+
+.todo__list-item {
+    list-style: none;
+    padding: 0.75em;
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+}
+
+.todo__list-item i {
+    cursor: pointer;
+}
+
+.todo__list-item p {
+    overflow-wrap: break-word;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 0.25em;
+    flex-grow: 1;
+}
+
+i.completed {
+    color: #1eb300;
+}
+
+p.completed {
+    color: gray;
+    font-style: italic;
+    text-decoration: line-through;
+    text-decoration-color: gray;
+}
