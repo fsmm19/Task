@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>To Do List</title>
+        <link rel="stylesheet" href="../styles/main.css" />
+        <link rel="stylesheet" href="../styles/app.css" />
+        <script
+            src="https://kit.fontawesome.com/50169bfed8.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="menu">
+                <i class="fa-solid fa-bars menu__icon"></i>
+                <span class="menu__text">MENÚ</span>
+            </div>
+            <h1 class="header__title">To Do List</h1>
+            <div class="profile">
+                <img
+                    src="../assets/images/profile-placeholder.jpg"
+                    alt="Imagen de perfil"
+                    class="profile__image"
+                />
+            </div>
+        </header>
+        <main class="todo">
+            <div class="todo__form">
+                <input
+                    type="text"
+                    class="todo__form-input"
+                    id="task-input"
+                    placeholder="Agregar una nueva tarea"
+                />
+                <button class="todo__form-button" id="add-task">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+            <ul class="todo__list" id="task-list"></ul>
+        </main>
+        <script src="../scripts/app.js"></script>
+    </body>
+</html>
