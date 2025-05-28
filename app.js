@@ -33,7 +33,7 @@ const updateTaskList = () => {
             <p class="todo__item-text ${
                 task.completed ? 'completed' : ''
             }" contenteditable="false">${task.text}</p>
-            <i class="fa-solid fa-xmark todo__item-delete"></i>
+            <i class="fa-solid fa-trash todo__item-delete"></i>
         `;
         taskList.append(listItem);
     });
