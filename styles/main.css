@@ -1,19 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
-:root {
-    --font-heading: 'Bebas Neue', sans-serif;
-    --font-body: 'Space Grotesk', sans-serif;
+/* Reset styles */
+@import 'reset.css';
 
-    --EnglishViolet: #413c58;
+:root {
+    --black: #191919;
+    --white: #f0f0f0;
+    --gray: #bbbbbb;
+
+    --font-family-inter: 'Inter', sans-serif;
+    --font-family-grotesk: 'Space Grotesk', sans-serif;
+
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 2rem;
+    --font-size-4xl: 3rem;
+
+    --line-height-sm: 1.25rem;
+    --line-height-md: 1.5rem;
+    --line-height-lg: 2.5rem;
+
+    --font-weight-medium: 400;
+    --font-weight-semibold: 600;
+
+    --border-radius-full: 9999px;
+
+    /* --EnglishViolet: #413c58;
     --AshGray: #a3c4bc;
     --TeaGreen: #bfd7b5;
     --Cream: #e7efc5;
-    --Parchment: #f2e7c9;
+    --Parchment: #f2e7c9; */
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+    min-height: 100dvh;
+    font-size: 100%;
+    font-family: var(--font-family-grotesk);
+    color: var(--black);
+    background-color: var(--white);
+    line-height: 1.4em;
+}
+
+.main {
+    height: 100dvh;
+    display: flex;
+}
+
+.main section {
+    flex: 1;
+}
+
+.login {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    gap: 2rem;
+}
+
+.login__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.login__button {
+    font-weight: var(--font-weight-semibold);
+    border-radius: var(--border-radius-full);
+    border-width: 1px;
+    border-style: solid;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+}
+
+.login__button--google {
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.login__button--google svg {
+    width: 1rem;
+    height: auto;
+}
+
+.login__button--email {
+    border-color: var(--gray);
+}
+
+.login__title {
+    font-size: var(--font-size-3xl);
+    font-family: var(--font-family-inter);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-lg);
+    color: var(--black);
+}
+
+.mockup {
+    background-color: var(--black);
 }
