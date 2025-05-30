@@ -19,7 +19,7 @@
     --font-size-xl: 1.25rem;
     --font-size-2xl: 1.5rem;
     --font-size-3xl: 2rem;
-    --font-size-4xl: 3rem;
+    --font-size-4xl: 2.25rem;
 
     --line-height-sm: 1.25rem;
     --line-height-md: 1.5rem;
@@ -49,35 +49,41 @@ body {
 .main {
     height: 100dvh;
     display: flex;
+    flex-wrap: wrap;
 }
 
-.main section {
-    flex: 1;
+.main > section {
+    flex: 1 1 300px;
+    min-width: 300px;
 }
 
 .login {
     background-color: var(--white);
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .login__wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1.25rem;
-    gap: 2rem;
+    gap: 2em;
+    padding: 0 1rem;
+}
+
+.login__title {
+    font-size: var(--font-size-4xl);
+    font-family: var(--font-family-inter);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-lg);
+    color: var(--black);
+    text-align: center;
 }
 
 .login__container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
+    gap: 0.5rem;
 }
 
 .login__button {
@@ -91,29 +97,21 @@ body {
 }
 
 .login__button--google {
-    background-color: var(--black);
-    color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    background-color: var(--black);
+    color: var(--white);
 }
 
-.login__button--google svg {
-    width: 1rem;
+.login__button--google > svg {
+    width: 1em;
     height: auto;
 }
 
 .login__button--email {
     border-color: var(--gray);
-}
-
-.login__title {
-    font-size: var(--font-size-3xl);
-    font-family: var(--font-family-inter);
-    font-weight: var(--font-weight-semibold);
-    line-height: var(--line-height-lg);
-    color: var(--black);
 }
 
 .mockup {
