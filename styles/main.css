@@ -68,6 +68,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2em;
+    padding: 0 1rem;
 }
 
 .login__title {
@@ -76,6 +77,7 @@ body {
     font-weight: var(--font-weight-semibold);
     line-height: var(--line-height-lg);
     color: var(--black);
+    text-align: center;
 }
 
 .login__container {
